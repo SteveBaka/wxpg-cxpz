@@ -1,0 +1,85 @@
+/**index.wxss**/
+
+.section{
+  display: flex;
+  color: 39,174,26;
+  font-size: 20px;
+  align-items: normal;
+
+}
+.selected-date {
+    text-align: center;
+    margin: 15px;
+    color: 39,174,26;
+  }
+.page-body {
+    width: 100%;
+    flex-grow: 1;
+    /* overflow-x: hidden; */
+  }
+  .page-body-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .page-body-wording {
+    text-align: center;
+    padding: 100px 50px;
+  }
+  .page-body-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--weui-BG-2);
+    width: 100%;
+    padding: 25px 0 75px 0;
+  }
+  .page-body-title {
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+  .page-body-text {
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--weui-FG-2);
+  }
+  .page-body-text-small {
+    font-size: 12px;
+    color: var(--weui-FG-0);
+    margin-bottom: 50px;
+  }
+  .page-section{
+    margin-bottom: 20rpx;
+  }
+  .input{
+font-size: 15px;
+display: flex;    /*设置显示样式**/
+align-items: normal;    /**子view垂直居中*/
+vertical-align: normal; /**垂直居中*/
+justify-content: normal; /**内容居中*/
+}
+ .picker{
+  color: rgb(47, 185, 42);
+  font-weight:bold;    /*设置字体加粗*/
+}
+.select{
+  color: rgb(47, 185, 42);
+  font-weight:bold;    /*设置字体加粗*/
+}
+.text{
+  display: flex;    /*设置显示样式**/
+  font-size: 15px;
+  align-items: center;    /**子view垂直居中*/
+  vertical-align: center; /**垂直居中*/
+  justify-content: center; /**内容居中*/
+}
+.block{
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+}
+.changein{
+  font-size: 15px;
+  
+}
+
