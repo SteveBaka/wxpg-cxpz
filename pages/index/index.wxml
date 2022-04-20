@@ -1,0 +1,34 @@
+<view>
+  <image style="width: 750rpx; height: 1356rpx; display: inline-block; box-sizing: border-box" src="https://s1.ax1x.com/2022/03/19/qko0tU.gif">
+
+  <view class="section">
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <view style="position: relative; left: 280rpx; top: -1080rpx; width: 240rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="picker">{{date}}</view>
+  </picker>
+  <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}">
+    <view style="position: relative;  left: 30rpx; top: -1010rpx; width: 240rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
+  </picker>
+</view>
+
+<view style="position: fixed;top: 682rpx;height: auto;width: 670rpx;left: 290rpx;" class="inputbox">
+  
+  <view class="input" style="position: relative; left: -48rpx; top: 0rpx">
+  <input style=" display: block; box-sizing: border-box;"  class="input" type="number"   placeholder="输入同步到view中"/></view>
+  <view class="input" style="position: relative; left: -137rpx; top: 55rpx"><input style="display: block; box-sizing: border-box;"  class="input" bindinput="bindKeyInput" placeholder="输入同步到view中"/></view>
+  <view class="input" style="position: relative; left: -226rpx; top: 120rpx"><input style="display: block; box-sizing: border-box;"  class="input" bindinput="bindKeyInput" placeholder="输入同步到view中"/></view>
+  <view class="input" style="position: relative; left: -316rpx; top: 174rpx"><input style=" display: block; box-sizing: border-box;"  class="input" type="number"   placeholder="输入同步到view中"/></view>
+ <view class="input" style="position: relative; left: -406rpx; top: 240rpx"><input style="display: block; box-sizing: border-box;"  class="input" bindinput="bindKeyInput" placeholder="xx(xxxx后)"/></view>
+
+</view>
+
+</image>
+
+<button style="height: 5rpx;"bindtap="changein">入</button>
+
+
+
+</view>
+
+
+
+
