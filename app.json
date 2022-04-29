@@ -2,7 +2,11 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/changein/index"
+    "pages/changein/index",
+    "pages/changeout/index",
+    "pages/page2/index",
+    "pages/preview/index",
+    "pages/timechanger/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

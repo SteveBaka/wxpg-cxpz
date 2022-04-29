@@ -1,0 +1,29 @@
+<!--pages/preview/index.wxml-->
+<view><image style="position: absolute;top: 0rpx; width: 750rpx;height: 1543rpx;opacity: 0.4;" src=""></image>
+  <view class="title"><text class="title" >在这里填写信息</text></view>
+      <view class="input" style="position: relative; left: 0rpx; top: 0rpx;">行1:
+        <input style="display: block; box-sizing: border-box; width: 300rpx; height: auto" class="input" type="number" placeholder="学号" bindinput="xhnum" />
+      </view>
+
+      <view class="input" style="position: relative; left: 0rpx; top: 0rpx">行2:
+        <input style="display: block; box-sizing: border-box; width: 300rpx; height: auto" class="input" bindinput="mzname" placeholder="姓名" />
+      </view>
+
+      <view class="input" style="position: relative; left: 0rpx; top: 0rpx">行3:
+        <input style="display: block; box-sizing: border-box; width: 300rpx; height: auto" class="input" bindinput="xyname" placeholder="学院" />
+      </view>
+
+      <view class="input" style="position: relative; left: 0rpx; top: 0rpx">行4:
+        <input style="display: block; box-sizing: border-box; width: 300rpx; height: auto" class="input" type="number" bindinput="njnum" placeholder="年级" />
+      </view>
+
+      <view class="input" style="position: relative; left: 0rpx; top: 0rpx">行5:
+        <input style="display: block; box-sizing: border-box; width: 420rpx; height: auto" class="input" bindinput="zyname" placeholder="专业" />
+      </view>
+    <button style="top: 300rpx; height: 72rpx; width: 160rpx; display: block; box-sizing: border-box; left: 0rpx"bindtap="save">保存</button>
+    
+  <text style="position: absolute; top:1000rpx;">{{datenum}}</text>
+  
+  
+
+</view>

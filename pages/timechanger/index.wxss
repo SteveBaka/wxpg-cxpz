@@ -1,0 +1,7 @@
+/* pages/timechanger/index.wxss */
+.title{
+  color: rebeccapurple;
+  font-weight: bolder;
+  font-size: 20px;
+}
+page{background-color:rgba(0, 0, 0, 0.1)}

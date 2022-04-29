@@ -1,0 +1,3 @@
+/* pages/page2/index.wxss */
+page{background-color:rgb(235,235,235)}
+.block{background-color: white;}

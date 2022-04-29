@@ -1,35 +1,47 @@
  <view>
-  <image style="width: 750rpx; height: 1356rpx; display: inline-block; box-sizing: border-box" src="https://s1.ax1x.com/2022/03/19/qko0tU.gif">
+  <image style="width: 750rpx; height: 1356rpx; display: inline-block; box-sizing: border-box" src="../img/cx.gif">
 
-  <view class="section">
+    <image style="width: 743rpx; height: 418rpx; top: 0rpx;display: inline-block; box-sizing: border-box;position: absolute;" src="../img/rx.gif"></image>
+
+    <view class="section">
   <picker mode="date" value="{{date}}" bindchange="bindDateChange">
-    <view style="position: relative; left: 280rpx; top: -1080rpx; width: 270rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="picker">{{date}}</view>
+    <view style="position: relative; left: 270rpx; top: -1080rpx; width: 260rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="picker">{{date}}</view>
   </picker>
   <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}">
-    <view style="position: relative;  left: 30rpx; top: -1010rpx; width: 240rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
+    <view style="position: relative;  left: 20rpx; top: -1020rpx; width: 250rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
   </picker>
+  <view style="width: 100%; background:rgb(251, 251, 251); height: 100px; position: fixed; left: 160rpx; top: 690rpx;width: 83rpx;height: 230rpx;position: absolute;"></view>
 </view>
 
-
-
-<view class="input" style="position: relative; left: 240rpx; top: -726rpx; "><input style=" display: block; box-sizing: border-box;"  class="input" type="number"   placeholder="输入同步到view中"/></view>
-<view class="input" style="position: relative; left: 240rpx; top: -718rpx;"><input style="display: block; box-sizing: border-box;"  class="input" bindinput="bindKeyInput" placeholder="输入同步到view中"/></view>
-<view class="input" style="position: relative; left: 240rpx; top: -712rpx;"><input style="display: block; box-sizing: border-box;"  class="input" bindinput="bindKeyInput" placeholder="输入同步到view中"/></view>
-<view class="input" style="position: relative; left: 240rpx; top: -707rpx; "><input style=" display: block; box-sizing: border-box;"  class="input" type="number"   placeholder="输入同步到view中"/></view>
-<view class="input" style="position: relative; left: 240rpx; top: -700rpx;"><input style="display: block; box-sizing: border-box;"  class="input" bindinput="bindKeyInput" placeholder="xx(xxxx后)"/></view>
-
-
-<image style="width: 743rpx; height: 418rpx; top: 0rpx;display: inline-block; box-sizing: border-box;position: fixed;" src="https://s1.ax1x.com/2022/03/19/qVSOL6.gif"></image>
-<view class="section">
-  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
-    <view style="position: relative; left: 280rpx; top: -1360rpx; width: 240rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="picker">{{date}}</view>
-  </picker>
-  <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}">
-    <view style="position: relative;  left: 30rpx; top: -1290rpx; width: 240rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
-  </picker>
+<view style="position: absolute;top: 682rpx;width: 600rpx; height: auto;left: 140rpx;" class="inputbox" >
+  <view class="input" style="position: relative; left: 0rpx; top: 0rpx;width: 400rpx;height: 30rpx;">
+  <image style=" position: fixed;" src="../img/xh.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
+  <text>{{xhnum}}</text>
 </view>
+
+<view class="input" style="position: relative; left: 0rpx; top: 20rpx;">
+  <image style=" position: fixed;" src="../img/xm.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
+  <text>{{mzname}}</text>
+</view>
+
+<view class="input" style="position: relative; left: -2.5rpx; top: 30rpx">
+  <image style=" position: fixed;" src="../img/xy.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
+  <text>{{xyname}}</text>
+</view>
+
+<view class="input" style="position: relative; left: 0rpx; top: 40rpx">
+  <image style=" position: fixed;" src="../img/zy.png" style="width: 80rpx; height: 32rpx; display: block; box-sizing: border-box"></image>
+  <text>{{njnum}}</text>
+</view>
+
+<view class="input" style="position: relative; left: -3.5rpx; top: 50rpx">
+  <image style=" position: fixed;" src="../img/zy.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
+  <text>{{zyname}}(普通高中后)</text>
+</view>
+    </view>
+
 </image>
-
+<text style="position: absolute; top: 270rpx;left: 270rpx;" class="dateinput-text">{{dateinput}}</text>
 </view>
 
 

@@ -1,0 +1,7 @@
+<!--pages/timechanger/index.wxml-->
+<text class="title">这里是为了调整时间而专门设立的页面
+后期需要日常修改的参数只在这里出现</text>
+<text style="position: absolute; top:1000rpx;">{{datenum}}</text>
+    <view>时间管理大师：<input  bindinput="dateinput" placeholder="2020-04-26"/></view>
+
+    <button style="top: 300rpx; height: 72rpx; width: 160rpx; display: block; box-sizing: border-box; left: 0rpx"bindtap="save">保存</button>

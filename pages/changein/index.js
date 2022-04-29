@@ -1,12 +1,14 @@
 // pages/changein/index.js
+const app = getApp()
 Page({  
     
   data: {
   theme: 'light',
-  date: '2022-02-02',
+  date: '',
   semester: [['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'],['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00']],
-  index:[9,21],
+  index:[10,22],
   inputValue: '',
+  xhnum: '',
 
 },
 
@@ -58,8 +60,29 @@ changein(){
   wx.navigateTo({
     url: '/pages/changein/index',
   })
-}
+},
 
+onLoad: function (options) {
+  var xhnum = wx.getStorageSync('xhnum');
+  var mzname = wx.getStorageSync('mzname');
+  var xyname = wx.getStorageSync('xyname');
+  var njnum = wx.getStorageSync('njnum');
+  var zyname = wx.getStorageSync('zyname');
+  var datenum = wx.getStorageSync('datenum');
+  var dateinput = wx.getStorageSync('dateinput');
+  
+  this.setData({
+    xhnum : xhnum ,
+    mzname : mzname ,
+    xyname : xyname ,
+    njnum : njnum ,
+    zyname : zyname ,
+    datenum : datenum ,
+    dateinput : dateinput ,
+    
+  });
+  
+},
 
 
 })
