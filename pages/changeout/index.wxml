@@ -1,19 +1,14 @@
-<view style="width: 750rpx; height: 1356rpx; display: block; box-sizing: border-box">
-  <image style="width: 750rpx; height: 1356rpx; display: inline-block; box-sizing: border-box" src="../img/cx.gif">
-
+<view style="position: absolute;bottom: 0rpx;"><image src="../img/ground.png" style="width: 750rpx;height: 750rpx;"></image></view>
+ <view>
+  <image style="width: 750rpx; height: 900rpx; display: inline-block; box-sizing: border-box" src="../img/cx-new.gif">
     <view class="section">
-      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
-        <view style="position: relative; left: 270rpx; top: -1080rpx; width: 260rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="picker">{{date}}</view>
-      </picker>
-      <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}">
-        <view style="position: relative;  left: 20rpx; top: -1010rpx; width: 250rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
-      </picker>
-      <view style="width: 100%; background:rgb(251, 251, 251); height: 100px; position: fixed; left: 160rpx; top: 690rpx;width: 83rpx;height: 230rpx;position: absolute;"></view>
-    </view>
+  <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}">
+    <view style="position: absolute;  left: 270rpx; top: 330rpx; width: 250rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
+  </picker>
+</view>
 
 
     <view style="position: absolute;top: 682rpx;width: 600rpx; height: auto;left: 140rpx;" class="inputbox" >
-
 <view class="input" style="position: relative; left: 0rpx; top: 0rpx;width: 400rpx;height: 30rpx;">
   <image style=" position: fixed;" src="../img/xh.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
   <text>{{xhnum}}</text>
@@ -41,10 +36,8 @@
 
 </view>
   </image>
-
-  <text style="position: relative; left: 564rpx; top: -1275rpx" class="timetext">28分38秒</text>
-<text style="position: absolute; top: 280rpx;left: 280rpx;" class="dateinput-text">{{dateinput}}</text>
-
+  <text style="position: absolute; left: 564rpx; top: 105rpx" class="timetext">28分38秒</text>
+  <text style="position: absolute; top: 270rpx;left: 270rpx;" class="dateinput-text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
 </view>
 
 

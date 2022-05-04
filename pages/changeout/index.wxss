@@ -70,8 +70,6 @@
 }
 .block{
   color: rgb(251,251,251);
-
-
 }
 
 .inputbox{
@@ -82,20 +80,6 @@
   display: flex;    /*设置显示样式**/
   align-items: center;    /**子view垂直居中*/
   }
-
-.changein{
-  font-size: 15px;
-
-}
-
-.bg{background-image: url('https://s1.ax1x.com/2022/03/20/qZhNz4.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: center;
-  background-position-x: center;
-
-
-}
 
 .timetext{
   color: rgb(255, 255, 255);

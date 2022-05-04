@@ -8,68 +8,60 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  dateinput(e){
+  yrinput(e){
     this.setData({
-      dateinput: e.detail.value
+      yrinput: e.detail.value
+    })
+  },
+  mouinput(e){
+    this.setData({
+      mouinput: e.detail.value
+    })
+  },
+  dayinput(e){
+    this.setData({
+      dayinput: e.detail.value
     })
   },
   save:function() {
     var that = this
-    wx.setStorageSync('dateinput', this.data.dateinput);
+    wx.setStorageSync('yrinput', this.data.yrinput);
+    wx.setStorageSync('mouinput', this.data.mouinput);
+    wx.setStorageSync('dayinput', this.data.dayinput);
     wx.showToast({
-      title: 'title',
+      title: '修改成功',
     });
-    wx.navigateTo({
-      url: '../page2/index',
+    wx.navigateBack({
+      delta: 0,
     })
   },
+
+onShow() {
+    const self = this
+    let yrinput = wx.getStorageSync('yrinput');
+    let mouinput = wx.getStorageSync('mouinput');
+    let dayinput = wx.getStorageSync('dayinput');
+    if (yrinput) {
+      self.data.yrinput = yrinput
+      self.setData(self.data)
+  }
+    if (mouinput) {
+    self.data.mouinput = mouinput
+    self.setData(self.data)
+  }
+    if (dayinput) {
+    self.data.dayinput = dayinput
+    self.setData(self.data)
+}
+},
+onInputText(e) {
+  const self = this
+  const value = e.detail.value
+  if (value) {
+      wx.setStorageSync('yrinput', value)
+      wx.setStorageSync('mouinput', value)
+      wx.setStorageSync('dayinput', value)
+  } 
+},
+
 })

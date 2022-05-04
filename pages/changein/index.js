@@ -5,7 +5,7 @@ Page({
   data: {
   theme: 'light',
   date: '',
-  semester: [['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'],['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00']],
+  semester: [['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'],['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00','23:59']],
   index:[10,22],
   inputValue: '',
   xhnum: '',
@@ -70,7 +70,9 @@ onLoad: function (options) {
   var zyname = wx.getStorageSync('zyname');
   var datenum = wx.getStorageSync('datenum');
   var dateinput = wx.getStorageSync('dateinput');
-  
+  var yrinput = wx.getStorageSync('yrinput');
+  var mouinput = wx.getStorageSync('mouinput');
+  var dayinput = wx.getStorageSync('dayinput');
   this.setData({
     xhnum : xhnum ,
     mzname : mzname ,
@@ -79,10 +81,10 @@ onLoad: function (options) {
     zyname : zyname ,
     datenum : datenum ,
     dateinput : dateinput ,
-    
+    yrinput : yrinput ,
+    mouinput : mouinput ,
+    dayinput : dayinput ,
   });
-  
 },
-
 
 })

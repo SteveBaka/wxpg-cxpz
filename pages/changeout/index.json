@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "出校凭证"
+  "navigationBarTitleText": "出校凭证",
+  "disableScroll": true
 }

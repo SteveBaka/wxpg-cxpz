@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "校园徤康"
+  "navigationBarTitleText": "校园徤康",
+  "disableScroll": true
 }

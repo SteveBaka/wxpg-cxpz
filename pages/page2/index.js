@@ -32,35 +32,19 @@ Page({
         }
       })
     },
-
-     delc(){
-      wx.showModal({
-        title: 'Steve提示您',
-        content: '确定删除空空如也的这里吗？',
-        success (res) {
-          if (res.confirm) {
-            console.log('用户点击确定')
-            wx.showToast({
-              title: '成功',
-            })}
-            else if (res.cancel) {
-            console.log('用户点击取消')
-          }
-        }
-      })
-     wx.vibrateShort({
-       type: 'light',
-     })
-     },
-     preview(){
+    preview(){
       wx.navigateTo({
         url: '/pages/preview/index',
       })
      },
      onLoad: function (options) {
-      var dateinput = wx.getStorageSync('dateinput');
+      var yrinput = wx.getStorageSync('yrinput');
+      var mouinput = wx.getStorageSync('mouinput');
+      var dayinput = wx.getStorageSync('dayinput');
       this.setData({
-        dateinput : dateinput ,
+        yrinput : yrinput ,
+        mouinput : mouinput ,
+        dayinput : dayinput ,
       });
     },
   timechanger(){

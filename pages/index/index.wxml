@@ -1,17 +1,2 @@
-<view style="background-color: rgb(236,235,242,);">
-  <view class='wel-list' bindtap='toout'>
-    <image style="width: 750rpx; height: 1335rpx; display: inline-block; box-sizing: border-box" src="../img/index.jpeg"></image>
-    <text></text>
-  </view>
-
-
-
-
-
-
-</view>
-
-
-
-
-
+<image style="width: 750rpx; height: 937rpx; display: inline-block; box-sizing: border-box" src="https://s1.ax1x.com/2022/05/04/OEl6pQ.jpg"bindtap='toout'></image>
+<button style="top: -1115rpx;left: 225rpx;width: 100rpx;height: 100rpx;background-color: rgba(255, 255, 255,0);"bindtap='toout'></button>

@@ -5,3 +5,6 @@
   font-size: 20px;
 }
 page{background-color:rgba(0, 0, 0, 0.1)}
+.date{
+  display: flex;
+}

@@ -14,27 +14,6 @@ Page({
     datenum:'时间需要在修改页里面修改'
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
 save:function() {
   var that = this
   wx.setStorageSync('xhnum', this.data.xhnum);
@@ -44,10 +23,10 @@ save:function() {
   wx.setStorageSync('zyname', this.data.zyname);
   wx.getStorageSync('datenum', this.data.datenum);
   wx.showToast({
-    title: '成功',
+    title: '保存成功',
   });
-  wx.navigateTo({
-    url: '../page2/index',
+  wx.navigateBack({
+    delta: 0,
   })
 },
 
@@ -81,6 +60,44 @@ bindDateChange(e){
     datenum: e.detail.value
   })
 },
-
+onShow() {
+  const self = this
+  let xhnum = wx.getStorageSync('xhnum');
+  let mzname = wx.getStorageSync('mzname');
+  let xyname = wx.getStorageSync('xyname');
+  let njnum = wx.getStorageSync('njnum');
+  let zyname = wx.getStorageSync('zyname');
+  if (xhnum) {
+    self.data.xhnum = xhnum
+    self.setData(self.data)
+}
+  if (mzname) {
+  self.data.mzname = mzname
+  self.setData(self.data)
+}
+  if (xyname) {
+  self.data.xyname = xyname
+  self.setData(self.data)
+}
+  if (njnum) {
+  self.data.njnum = njnum
+  self.setData(self.data)
+}
+  if (zyname) {
+  self.data.zyname = zyname
+  self.setData(self.data)
+}
+},
+onInputText(e) {
+const self = this
+const value = e.detail.value
+if (value) {
+  wx.setStorageSync('xhnum', this.data.xhnum);
+  wx.setStorageSync('mzname', this.data.mzname);
+  wx.setStorageSync('xyname', this.data.xyname);
+  wx.setStorageSync('njnum', this.data.njnum);
+  wx.setStorageSync('zyname', this.data.zyname);
+} 
+},
 
 })

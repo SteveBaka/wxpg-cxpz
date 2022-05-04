@@ -1,5 +1,4 @@
 <!--pages/page2/index.wxml-->
-
 <view>
 <image style="width: 750rpx; height: 967rpx; display: inline-block; box-sizing: border-box" src="../img/preview.jpeg">
 <button style="top: -260rpx;left: -215rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="changein"></button>
@@ -9,8 +8,7 @@
 <button style="top: -540rpx;left: 280rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="timechanger"></button>
 <view style="position: absolute;top: 285rpx; left: 180rpx; width: 150rpx;height: 40rpx;"class="block"></view>
 <view style="position: absolute; top: 377rpx; left: 179rpx; width: 150rpx; height: 40rpx"class="block"></view>
-
-<text style="position: absolute;top:280rpx;left: 180rpx;" class="text">{{dateinput}}</text>
-<text style="position: absolute;top:377rpx;left: 180rpx;" class="text">{{dateinput}}</text>
+<text style="position: absolute;top:280rpx;left: 180rpx;" class="text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
+<text style="position: absolute;top:377rpx;left: 180rpx;" class="text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
 </image>
 </view>
