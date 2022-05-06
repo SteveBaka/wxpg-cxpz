@@ -1,14 +1,18 @@
 <!--pages/page2/index.wxml-->
+<view style="height: 20rpx;"></view>
+<button class="add" style="height: 80rpx;width: 710rpx;" bindtap="preview">添加</button>
 <view>
-<image style="width: 750rpx; height: 967rpx; display: inline-block; box-sizing: border-box" src="../img/preview.jpeg">
+<image style="width: 750rpx; height: 868rpx; display: inline-block; box-sizing: border-box" src="https://s1.ax1x.com/2022/05/06/OuaFUO.jpg">
 <button style="top: -260rpx;left: -215rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="changein"></button>
 <button style="top: -340rpx;left: -35rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="changeout"></button>
 <button style="top: -410rpx;left: 130rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindlongpress="delc"></button>
-<button style="top: -1150rpx;left: 0rpx;width: 680rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="preview"></button>
+<button style="top: -1150rpx;left: 0rpx;width: 700rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="preview"></button>
 <button style="top: -540rpx;left: 280rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="timechanger"></button>
 <view style="position: absolute;top: 285rpx; left: 180rpx; width: 150rpx;height: 40rpx;"class="block"></view>
-<view style="position: absolute; top: 377rpx; left: 179rpx; width: 150rpx; height: 40rpx"class="block"></view>
+<view style="position: absolute;top: 380rpx; left: 180rpx; width: 150rpx;height: 40rpx;"class="block"></view>
+
 <text style="position: absolute;top:280rpx;left: 180rpx;" class="text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
 <text style="position: absolute;top:377rpx;left: 180rpx;" class="text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
 </image>
+<image style="width: 750rpx; height: 868rpx; display: inline-block; box-sizing: border-box" src="https://s1.ax1x.com/2022/05/06/OuaFUO.jpg"></image>
 </view>

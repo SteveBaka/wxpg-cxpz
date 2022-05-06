@@ -36,9 +36,9 @@
 
 </view>
   </image>
-  <text style="position: absolute; left: 564rpx; top: 105rpx" class="timetext">28分38秒</text>
-  <text style="position: absolute; top: 270rpx;left: 270rpx;" class="dateinput-text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
+  <text style="position: absolute; top: 280rpx;left: 280rpx;" class="dateinput-text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
 </view>
+<view class='countDown' style="position: absolute; left: 564rpx; top: 105rpx">28分<text>{{countDownNum}}</text>秒</view>
 
 
 
