@@ -1,0 +1,11 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {},
+  "compileType": "miniprogram",
+  "projectname": "wxmp-cxpz(core)",
+  "isGameTourist": false,
+  "isFulljs": true
+}

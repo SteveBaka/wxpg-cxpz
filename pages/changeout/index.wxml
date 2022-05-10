@@ -1,44 +1,42 @@
-<view style="position: absolute;bottom: 0rpx;"><image src="../img/ground.png" style="width: 750rpx;height: 750rpx;"></image></view>
- <view>
+<view><view style="position: absolute;bottom: 0rpx;"><image src="../img/ground.png" style="width: 750rpx;height: 750rpx;"></image></view>
   <image style="width: 750rpx; height: 900rpx; display: inline-block; box-sizing: border-box" src="../img/cx-new.gif">
-    <view class="section">
-  <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}">
-    <view style="position: absolute;  left: 270rpx; top: 330rpx; width: 250rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
+    <view class="section" style="position: absolute;  left: 270rpx; top: 280rpx; width: 250rpx; height: 50rpx; vertical-align: middle;">
+    <text class="select">{{date}}</text>
+  <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}" >
+    <view  class="select" >{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
   </picker>
 </view>
 
-
-    <view style="position: absolute;top: 682rpx;width: 600rpx; height: auto;left: 140rpx;" class="inputbox" >
-<view class="input" style="position: relative; left: 0rpx; top: 0rpx;width: 400rpx;height: 30rpx;">
+  <view style="position: absolute;top: 682rpx;width: 600rpx; height: auto;left: 140rpx;" class="inputbox" >
+    <view class="input" style="position: relative; left: 0rpx; top: 0rpx;width: 400rpx;height: 30rpx;">
   <image style=" position: fixed;" src="../img/xh.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
   <text>{{xhnum}}</text>
 </view>
 
-<view class="input" style="position: relative; left: 0rpx; top: 20rpx;">
+    <view class="input" style="position: relative; left: 0rpx; top: 20rpx;">
   <image style=" position: fixed;" src="../img/xm.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
   <text>{{mzname}}</text>
 </view>
 
-<view class="input" style="position: relative; left: -2.5rpx; top: 30rpx">
+    <view class="input" style="position: relative; left: -2.5rpx; top: 30rpx">
   <image style=" position: fixed;" src="../img/xy.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
   <text>{{xyname}}</text>
 </view>
 
-<view class="input" style="position: relative; left: 0rpx; top: 40rpx">
+    <view class="input" style="position: relative; left: 0rpx; top: 40rpx">
   <image style=" position: fixed;" src="../img/zy.png" style="width: 80rpx; height: 32rpx; display: block; box-sizing: border-box"></image>
   <text>{{njnum}}</text>
 </view>
 
-<view class="input" style="position: relative; left: -3.5rpx; top: 50rpx">
+    <view class="input" style="position: relative; left: -3.5rpx; top: 50rpx">
   <image style=" position: fixed;" src="../img/zy.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
   <text>{{zyname}}(普通高中后)</text>
 </view>
-
 </view>
-  </image>
-  <text style="position: absolute; top: 280rpx;left: 280rpx;" class="dateinput-text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
-</view>
+</image>
 <view class='countDown' style="position: absolute; left: 564rpx; top: 105rpx">28分<text>{{countDownNum}}</text>秒</view>
+</view>
+
 
 
 

@@ -4,8 +4,7 @@
     "pages/changein/index",
     "pages/changeout/index",
     "pages/page2/index",
-    "pages/preview/index",
-    "pages/timechanger/index"
+    "pages/preview/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,13 +1,13 @@
 <view style="position: absolute;bottom: 0rpx;"><image src="../img/ground.png" style="width: 750rpx;height: 750rpx;"></image></view>
  <view>
-  <image style="width: 750rpx; height: 900rpx; display: inline-block; box-sizing: border-box" src="cx-ground.png">
-    <image style="width: 743rpx; height: 418rpx; top: 0rpx;display: inline-block; box-sizing: border-box;position: absolute;" src="../img/rx-new.gif"></image>
-    <view class="section">
-  <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}">
-    <view style="position: absolute;  left: 270rpx; top: 330rpx; width: 250rpx; height: 50rpx; box-sizing: border-box; vertical-align: middle;" class="select">{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
+  <image style="width: 750rpx; height: 900rpx; display: inline-block; box-sizing: border-box" src="../img/cx-ground.png">
+    <image style="width: 743rpx; height: 418rpx; top: 0rpx;display: inline-block; box-sizing: border-box;position: absolute;" src="../img/rx.gif"></image>
+    <view class="section" style="position: absolute;  left: 270rpx; top: 270rpx; width: 250rpx; height: 50rpx; vertical-align: middle;">
+      <text class="select"> {{date}} </text>
+    <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}" >
+    <view  class="select" >{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
   </picker>
 </view>
-
 <view style="position: absolute;top: 682rpx;width: 600rpx; height: auto;left: 140rpx;" class="inputbox" >
   <view class="input" style="position: relative; left: 0rpx; top: 0rpx;width: 400rpx;height: 30rpx;">
   <image style=" position: fixed;" src="../img/xh.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
@@ -33,10 +33,10 @@
   <image style=" position: fixed;" src="../img/zy.png" style="width: 80rpx; height: 30rpx; display: block; box-sizing: border-box"></image>
   <text>{{zyname}}(普通高中后)</text>
 </view>
-    </view>
-</image>
-<text style="position: absolute; top: 270rpx;left: 270rpx;" class="dateinput-text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
 </view>
+</image>
+</view>
+
 
 
 

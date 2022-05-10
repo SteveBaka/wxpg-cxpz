@@ -1,6 +1,30 @@
 // pages/page2/index.js
+function  getDate(type) {
+  const date = new Date();
+
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+
+  if (type === 'start') {
+    year = year - 10;
+  } else if (type === 'end') {
+    year = year + 10;
+  }
+  month = month > 9 ? month : '0' + month;;
+  day = day > 9 ? day : '0' + day;
+
+  return `${year}-${month}-${day}`;
+}
 Page({  
-  changeout(){
+  data: {
+    date: getDate({
+      format: true
+    }),
+    startDate:getDate('start'),
+    endDate:getDate('end'),
+  },
+  changeout: function(){
       wx.showModal({
         title: '提示',
         content: '出校码生成后需在半个小时内出校，超过时间则出校码失效！',
@@ -15,8 +39,10 @@ Page({
           }
         }
       })
+      var that = this
+      wx.setStorageSync('date', this.data.date);
     },
-    changein(){
+    changein:function(){
       wx.showModal({
         title: '提示',
         content: '入校码生成后需在半个小时内出校，超过时间则入校码失效！',
@@ -31,6 +57,8 @@ Page({
           }
         }
       })
+      var that = this
+      wx.setStorageSync('date', this.data.date);
     },
     preview(){
       wx.navigateTo({
@@ -38,13 +66,9 @@ Page({
       })
      },
      onLoad: function (options) {
-      var yrinput = wx.getStorageSync('yrinput');
-      var mouinput = wx.getStorageSync('mouinput');
-      var dayinput = wx.getStorageSync('dayinput');
+      var date = wx.getStorageSync('date');
       this.setData({
-        yrinput : yrinput ,
-        mouinput : mouinput ,
-        dayinput : dayinput ,
+        date : date ,
       });
     },
   timechanger(){
@@ -52,6 +76,10 @@ Page({
       url: '/pages/timechanger/index',
     })
   },
-  
+  bindDateChange(e){
+    this.setData({
+      date: e.detail.value
+    })
+  },
   })
   

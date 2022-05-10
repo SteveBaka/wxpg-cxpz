@@ -2,7 +2,7 @@
 <view style="height: 20rpx;"></view>
 <button class="add" style="height: 80rpx;width: 710rpx;" bindtap="preview">添加</button>
 <view>
-<image style="width: 750rpx; height: 868rpx; display: inline-block; box-sizing: border-box" src="https://s1.ax1x.com/2022/05/06/OuaFUO.jpg">
+<image style="width: 750rpx; height: 868rpx; display: inline-block; box-sizing: border-box" src="../img/preview.jpeg">
 <button style="top: -260rpx;left: -215rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="changein"></button>
 <button style="top: -340rpx;left: -35rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="changeout"></button>
 <button style="top: -410rpx;left: 130rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindlongpress="delc"></button>
@@ -10,9 +10,10 @@
 <button style="top: -540rpx;left: 280rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="timechanger"></button>
 <view style="position: absolute;top: 285rpx; left: 180rpx; width: 150rpx;height: 40rpx;"class="block"></view>
 <view style="position: absolute;top: 380rpx; left: 180rpx; width: 150rpx;height: 40rpx;"class="block"></view>
-
-<text style="position: absolute;top:280rpx;left: 180rpx;" class="text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
-<text style="position: absolute;top:377rpx;left: 180rpx;" class="text">{{yrinput}}-{{mouinput}}-{{dayinput}}</text>
+<picker style="position: absolute; top: 700rpx;width: 100rpx;height: 70rpx;left: 600rpx;" mode="date" :value="date" :start="startDate" :end="endDate" bindchange="bindDateChange">
+<view class="select" style="position: absolute;top:-420rpx;left: -420rpx;width: 200rpx;" >{{date}}</view>
+</picker>
+<text style="position: absolute;top:377rpx;left: 180rpx;" class="text">{{date}}</text>
 </image>
-<image style="width: 750rpx; height: 868rpx; display: inline-block; box-sizing: border-box" src="https://s1.ax1x.com/2022/05/06/OuaFUO.jpg"></image>
+<image style="width: 750rpx; height: 868rpx; display: inline-block; box-sizing: border-box" src="../img/preview.jpeg"></image>
 </view>

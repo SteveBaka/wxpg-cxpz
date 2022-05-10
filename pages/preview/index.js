@@ -1,5 +1,5 @@
 // pages/preview/index.js
-const app = getApp()
+
 Page({
 
   /**
@@ -10,8 +10,7 @@ Page({
     mzname:'',
     xyname:'',
     njnum:'',
-    zyname:'',
-    datenum:'时间需要在修改页里面修改'
+    zyname:''
   },
 
 save:function() {
@@ -21,12 +20,11 @@ save:function() {
   wx.setStorageSync('xyname', this.data.xyname);
   wx.setStorageSync('njnum', this.data.njnum);
   wx.setStorageSync('zyname', this.data.zyname);
-  wx.getStorageSync('datenum', this.data.datenum);
   wx.showToast({
-    title: '保存成功',
+    title: '成功保存',
   });
-  wx.navigateBack({
-    delta: 0,
+  wx.navigateTo({
+    url: '/pages/page2/index',
   })
 },
 
@@ -55,11 +53,7 @@ zyname(e){
     zyname: e.detail.value
   })
 },
-bindDateChange(e){
-  this.setData({
-    datenum: e.detail.value
-  })
-},
+
 onShow() {
   const self = this
   let xhnum = wx.getStorageSync('xhnum');
@@ -67,26 +61,15 @@ onShow() {
   let xyname = wx.getStorageSync('xyname');
   let njnum = wx.getStorageSync('njnum');
   let zyname = wx.getStorageSync('zyname');
-  if (xhnum) {
+
+  if ({ xhnum,mzname,zyname,xyname,njnum }) {
     self.data.xhnum = xhnum
+    self.data.mzname = mzname
+    self.data.zyname = zyname
+    self.data.xyname = xyname
+    self.data.njnum = njnum
     self.setData(self.data)
-}
-  if (mzname) {
-  self.data.mzname = mzname
-  self.setData(self.data)
-}
-  if (xyname) {
-  self.data.xyname = xyname
-  self.setData(self.data)
-}
-  if (njnum) {
-  self.data.njnum = njnum
-  self.setData(self.data)
-}
-  if (zyname) {
-  self.data.zyname = zyname
-  self.setData(self.data)
-}
+  }
 },
 onInputText(e) {
 const self = this

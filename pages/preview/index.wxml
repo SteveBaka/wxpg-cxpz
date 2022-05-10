@@ -20,7 +20,7 @@
       <view class="input" style="position: relative; left: 0rpx; top: 0rpx">行5:
         <input style="display: block; box-sizing: border-box; width: 420rpx; height: auto" class="input" value="{{zyname}}" bindinput="zyname" placeholder="专业" />
       </view>
-    <button style="top: 300rpx; height: 72rpx; width: 160rpx; display: block; box-sizing: border-box; left: 0rpx"bindtap="save">保存</button>
+
+  <button style="top: 300rpx; height: 72rpx; width: 160rpx; display: block; box-sizing: border-box; left: 0rpx"bindtap="save">保存</button>
     
-  <text style="position: absolute; top:1000rpx;">{{datenum}}</text>
 </view>

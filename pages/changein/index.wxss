@@ -1,36 +1,11 @@
 /**index.wxss**/
-
+page{background-color:rgb(235,235,235)}
 .section{
-  display: flex;
   color: 39,174,26;
   font-size: 20px;
   align-items: normal;
 
 }
-.selected-date {
-    text-align: center;
-    margin: 15px;
-    color: 39,174,26;
-  }
-.page-body {
-    width: 100%;
-    flex-grow: 1;
-    /* overflow-x: hidden; */
-  }
-  .page-body-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .page-body-wording {
-    text-align: center;
-    padding: 100px 50px;
-  }
-
-  .page-section{
-    margin-bottom: 20rpx;
-  }
 
  .picker{
   color: rgb(47, 185, 42);
@@ -55,8 +30,3 @@
   display: flex;    /*设置显示样式**/
   align-items: center;    /**子view垂直居中*/
   }
-.dateinput-text{
-    color: rgb(47, 185, 42);
-    font-size: 20px;
-    font-weight: normal;
-  }  
