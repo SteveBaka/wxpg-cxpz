@@ -60,26 +60,17 @@ Page({
       var that = this
       wx.setStorageSync('date', this.data.date);
     },
-    preview(){
+
+     preview(){
       wx.navigateTo({
         url: '/pages/preview/index',
       })
      },
-     onLoad: function (options) {
-      var date = wx.getStorageSync('date');
-      this.setData({
-        date : date ,
-      });
-    },
-  timechanger(){
-    wx.navigateTo({
-      url: '/pages/timechanger/index',
-    })
-  },
+
   bindDateChange(e){
-    this.setData({
-      date: e.detail.value
-    })
-  },
+      this.setData({
+        date: e.detail.value
+      })
+    },
   })
   

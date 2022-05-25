@@ -1,0 +1,3 @@
+<view class="mz" style="position: absolute;top: 0rpx;left: 0rpx;background-color:rgb(3, 153, 266);width: 750rpx;height: 200rpx;"> 
+<text class="mz" style="position: absolute;top: 0rpx;left: 40rpx;width: 750rpx;height: 200rpx;">Hi，{{mzname}}</text></view>
+<text class="pl" style="position: absolute;bottom: 0rpx;width: 100%;color: #b2b2b2" >Version: CORE</text>

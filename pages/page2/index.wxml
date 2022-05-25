@@ -10,10 +10,10 @@
 <button style="top: -540rpx;left: 280rpx;width: 80rpx;height: 70rpx;background-color: rgba(255, 255, 255,0);"bindtap="timechanger"></button>
 <view style="position: absolute;top: 285rpx; left: 180rpx; width: 150rpx;height: 40rpx;"class="block"></view>
 <view style="position: absolute;top: 380rpx; left: 180rpx; width: 150rpx;height: 40rpx;"class="block"></view>
-<picker style="position: absolute; top: 700rpx;width: 100rpx;height: 70rpx;left: 600rpx;" mode="date" :value="date" :start="startDate" :end="endDate" bindchange="bindDateChange">
-<view class="select" style="position: absolute;top:-420rpx;left: -420rpx;width: 200rpx;" >{{date}}</view>
+<picker style="position: absolute; top: 278rpx;width: 200rpx;height: 50rpx;left: 180rpx;" mode="date" :value="date" :start="startDate" :end="endDate" bindchange="bindDateChange">
+<view class="date" style="position: absolute;" >{{date}}</view>
 </picker>
-<text style="position: absolute;top:377rpx;left: 180rpx;" class="text">{{date}}</text>
+<text style="position: absolute;top:375rpx;left: 180rpx;" class="date">{{date}}</text>
 </image>
 <image style="width: 750rpx; height: 868rpx; display: inline-block; box-sizing: border-box" src="../img/preview.jpeg"></image>
 </view>

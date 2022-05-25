@@ -1,44 +1,13 @@
 // pages/changein/index.js
-const app = getApp()
+
 Page({  
     
   data: {
   theme: 'light',
-  date: '',
   semester: [['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'],['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00','23:59']],
   index:[10,23],
-  inputValue: '',
-  xhnum: '',
-
-},
-
-bindPickerChange: function (e) {
-  console.log('picker发送选择改变，携带值为', e.detail.value)
-  this.setData({
-    index: e.detail.value
-  })
-},
-bindMultiPickerChange: function (e) {
-  console.log('picker发送选择改变，携带值为', e.detail.value)
-  this.setData({
-    multiIndex: e.detail.value
-  })
-},
-bindMultiPickerColumnChange: function (e) {
-  console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
-  var data = {
-    multiArray: this.data.multiArray,
-    multiIndex: this.data.multiIndex
-  };
-  data.multiIndex[e.detail.column] = e.detail.value;
-
-  this.setData(data);
-},
-bindDateChange: function(e) {
-  console.log('picker发送选择改变，携带值为', e.detail.value)
-  this.setData({
-    date: e.detail.value
-  })
+  timer: '',//定时器名字
+  countDownNum: '60',//倒计时初始值
 },
 
 bindSemesterChange:function(e){
@@ -50,17 +19,12 @@ bindSemesterChange:function(e){
 bindColumnChange:function(e){
   console.log(e.detail)    
 },
-
-bindKeyInput: function (e) {
-  this.setData({
-    inputValue: e.detail.value
-  })
-},
-changein(){
-  wx.navigateTo({
-    url: '/pages/changein/index',
-  })
-},
+onShareAppMessage: function(res) {
+  return{
+    title:"下次一定",
+    path: '/pages/fkti/index'
+  }
+  },
 
 onLoad: function (options) {
   var xhnum = wx.getStorageSync('xhnum');
@@ -78,5 +42,22 @@ onLoad: function (options) {
     date : date ,
   });
 },
-
+onShow: function(){
+  this.countDown();
+},
+countDown: function () {
+  let that = this;
+  let countDownNum = that.data.countDownNum;
+  that.setData({
+    timer: setInterval(function () {
+      countDownNum--;
+      that.setData({
+        countDownNum: countDownNum
+      })
+      if (countDownNum == 0) {
+        clearInterval(that.data.timer);
+      }
+    }, 1000)
+  })
+},
 })

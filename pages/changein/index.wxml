@@ -1,9 +1,11 @@
-<view style="position: absolute;bottom: 0rpx;"><image src="../img/ground.png" style="width: 750rpx;height: 750rpx;"></image></view>
- <view>
+<view><view style="position: absolute;bottom: 0rpx;"><image src="../img/ground.png" style="width: 750rpx;height: 750rpx;"></image></view>
   <image style="width: 750rpx; height: 900rpx; display: inline-block; box-sizing: border-box" src="../img/cx-ground.png">
-    <image style="width: 743rpx; height: 418rpx; top: 0rpx;display: inline-block; box-sizing: border-box;position: absolute;" src="../img/rx.gif"></image>
-    <view class="section" style="position: absolute;  left: 270rpx; top: 270rpx; width: 250rpx; height: 50rpx; vertical-align: middle;">
-      <text class="select"> {{date}} </text>
+    <image style="width: 750rpx; height: 210rpx; top: 0rpx;display: inline-block; box-sizing: border-box;position: absolute;" src="../img/rx-header.png"></image>
+    <image style="width: 750rpx; height: 242rpx; top: 210rpx;display: inline-block; box-sizing: border-box;position: absolute;" src="../img/cx-new.gif"></image>
+    <image style="width: 300rpx; height: 45rpx; top: 249rpx;left: 220rpx;display: inline-block; box-sizing: border-box;position: absolute;" src="../img/rx-yyxsj.png"></image>
+    <view class='countDown' style="position: absolute; left: 564rpx; top: 110rpx">29分<text>{{countDownNum}}</text>秒</view>
+    <view class="section" style="position: absolute;  left: 270rpx; top: 300rpx; width: 250rpx; height: 50rpx; vertical-align: middle;">
+    <text class="select">{{date}}</text>
     <picker mode="multiSelector" bindchange="bindSemesterChange" bindcolumnchange="bindColumnChange" value="{{index}}" range="{{semester}}" >
     <view  class="select" >{{semester[0][index[0]]+'-'+semester[1][index[1]]}}</view>
   </picker>
@@ -36,8 +38,3 @@
 </view>
 </image>
 </view>
-
-
-
-
-

@@ -4,12 +4,28 @@
     "pages/changein/index",
     "pages/changeout/index",
     "pages/page2/index",
-    "pages/preview/index"
+    "pages/preview/index",
+    "pages/intro/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#5F90D7",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/pages/img/tabbar.png",
+      "selectedIconPath": "/pages/img/tabbar.png"
+    }, 
+    {
+      "pagePath": "pages/intro/index",
+      "text": "我的",
+      "iconPath": "/pages/img/my-tab.png",
+      "selectedIconPath": "/pages/img/my-tab.png"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

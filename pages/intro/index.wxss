@@ -1,0 +1,11 @@
+/* pages/intro/index.wxss */
+.mz{
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.pl{
+    align-content: center;
+    text-align: center;
+    font-size: 8pt;
+}
